@@ -331,6 +331,7 @@
 
 <!--stores -->
         <LinearLayout
+            android:id="@+id/stores"
             android:layout_marginTop="10dp"
             android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
@@ -527,6 +528,140 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
+<!--metro supermarket-->
+            <LinearLayout
+                android:layout_width="375dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/metro_market"
+                    android:contentDescription="@string/metro_market"
+                    android:layout_gravity="center"
+
+                    />
+                <LinearLayout
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/metro_markets"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        tools:ignore="MissingConstraints" />
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hypermarket"
+                        android:textStyle="bold"
+                        android:textColor="@color/thickGray"
+                        android:textSize="14sp"
+                        tools:ignore="MissingConstraints" />
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/waiting_time"
+                            android:src="@drawable/waiting_time"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/within_21_mins"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:ignore="MissingConstraints" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+<!--spinnes supermarket-->
+            <LinearLayout
+                android:layout_width="375dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/spinnes"
+                    android:contentDescription="@string/spinnes"
+                    android:layout_gravity="center"
+
+                    />
+                <LinearLayout
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/spinneys"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        tools:ignore="MissingConstraints" />
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hypermarket"
+                        android:textStyle="bold"
+                        android:textColor="@color/thickGray"
+                        android:textSize="14sp"
+                        tools:ignore="MissingConstraints" />
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/waiting_time"
+                            android:src="@drawable/waiting_time"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/within_15_mins"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:ignore="MissingConstraints" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/stores"
+            tools:ignore="MissingConstraints">
 
         </LinearLayout>
 

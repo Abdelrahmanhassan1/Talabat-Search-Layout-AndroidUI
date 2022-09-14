@@ -30,5 +30,10 @@
     <string name="within_20_mins">Within 20 mins</string>
     <string name="soudi_supermarket">Soudi Supermarket</string>
     <string name="within_21_mins">Within 21 mins</string>
+    <string name="metro_market">Metro Market</string>
+    <string name="metro_markets">Metro Markets</string>
+    <string name="spinnes">Spinnes</string>
+    <string name="spinneys">Spinneys</string>
+    <string name="within_15_mins">Within 15 mins</string>
 
 </resources>
