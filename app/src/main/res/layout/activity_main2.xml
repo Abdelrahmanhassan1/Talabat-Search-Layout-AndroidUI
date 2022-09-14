@@ -1,0 +1,673 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <!--  first block -->
+
+        <ImageView
+            android:id="@+id/backArrow"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/arrow_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            tools:ignore="MissingConstraints"
+            android:contentDescription="@string/backArrow" />
+
+        <LinearLayout
+            android:id="@+id/delivering"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/backArrow"
+            app:layout_constraintTop_toTopOf="@+id/backArrow"
+            app:layout_constraintBottom_toBottomOf="@+id/backArrow"
+            android:layout_marginStart="15dp"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/deliver"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:letterSpacing="0.05"
+                android:textColor="#000000"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/location"
+                android:textColor="#FF6F01"
+                />
+
+        </LinearLayout>
+
+        <!-- *************** -->
+
+        <!--  search box -->
+        <LinearLayout
+            android:layout_width="375dp"
+            android:layout_height="wrap_content"
+            tools:ignore="MissingConstraints"
+            android:id="@+id/searchBox"
+            app:layout_constraintStart_toStartOf="@+id/backArrow"
+            app:layout_constraintEnd_toEndOf="@+id/talabatMart"
+            app:layout_constraintTop_toBottomOf="@+id/backArrow"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:background="@drawable/search_box_border"
+            >
+            <ImageView
+                android:id="@+id/searchIcon"
+                android:layout_width="40dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:contentDescription="@string/searchIcon"
+                android:src="@drawable/ic_baseline_search_24"
+                />
+            <TextView
+                android:id="@+id/searchText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/search"
+                android:padding="5dp"
+                android:textSize="17sp"
+                android:textColor="@color/gray"
+                tools:ignore="MissingConstraints" />
+        </LinearLayout>
+
+        <!-- *************** -->
+
+        <!--  talabat mart voucher -->
+        <ImageView
+            android:id="@+id/talabatMart"
+            android:layout_width="373dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/talabat_mart"
+            android:contentDescription="@string/talabtMart"
+            app:layout_constraintTop_toBottomOf="@+id/searchBox"
+            app:layout_constraintStart_toStartOf="@+id/backArrow"
+            app:layout_constraintCircleRadius="5dp"
+            tools:ignore="MissingConstraints" />
+
+        <!-- *************** -->
+
+        <!-- boxes-->
+        <LinearLayout
+            android:id="@+id/cardBoxes"
+            android:layout_width="375dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="@+id/backArrow"
+            app:layout_constraintEnd_toEndOf="@+id/searchBox"
+            app:layout_constraintTop_toBottomOf="@+id/talabatMart"
+            tools:ignore="MissingConstraints"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <!--use voucher-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_box_border"
+                android:layout_weight="1"
+                android:layout_marginEnd="20dp"
+                tools:ignore="UselessParent"
+                android:padding="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/use"
+                        android:textSize="16sp"
+                        android:letterSpacing="0.05"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/voucher"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+                <ImageView
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
+                    android:layout_width="22dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/coupon"
+                    android:contentDescription="@string/coupon"
+                    />
+
+            </LinearLayout>
+            <!--popular stores-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_box_border"
+                android:layout_weight="1"
+                android:layout_marginEnd="20dp"
+                tools:ignore="UselessParent"
+
+                android:padding="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/popular"
+                        android:textSize="16sp"
+                        android:letterSpacing="0.05"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stores"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+                <ImageView
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
+                    android:layout_width="20dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/heart"
+                    android:contentDescription="@string/heart"
+                    />
+
+            </LinearLayout>
+            <!--fast delivery-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_box_border"
+                android:layout_weight="1"
+                tools:ignore="UselessParent"
+                android:padding="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fast"
+                        android:textSize="16sp"
+                        android:letterSpacing="0.05"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/delivery"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+                <ImageView
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
+                    android:layout_width="21dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/clock"
+                    android:contentDescription="@string/waiting"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--shop by store text-->
+        <TextView
+            android:id="@+id/storeTypeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shop_by_store_type"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/backArrow"
+            app:layout_constraintTop_toBottomOf="@+id/cardBoxes"
+            android:layout_marginTop="15dp"
+            tools:ignore="MissingConstraints" />
+
+        <!--stores different tabs-->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/storesTabs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/backArrow"
+            app:layout_constraintEnd_toEndOf="@+id/talabatMart"
+            app:layout_constraintTop_toBottomOf="@+id/storeTypeText"
+            android:layout_marginTop="8dp"
+            tools:ignore="MissingConstraints">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+                <TextView
+                    android:id="@+id/firstTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/store_tab_box_clicked"
+                    android:text="@string/grocery_stores"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:padding="8dp"
+                    android:layout_weight="1"
+                    android:textSize="15sp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    tools:ignore="MissingConstraints" />
+                <TextView
+                    android:id="@+id/secondTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/store_tab_box_not_clicked"
+                    android:text="@string/fruits_vegetables"
+                    android:textStyle="bold"
+                    android:layout_marginEnd="10dp"
+                    android:textColor="@color/thickGray"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:textSize="15sp"
+                    android:layout_marginTop="5dp"
+                    tools:ignore="MissingConstraints" />
+                <TextView
+                    android:id="@+id/thirdTab"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/store_tab_box_not_clicked"
+                    android:text="@string/fresh_food"
+                    android:textStyle="bold"
+                    android:textColor="@color/thickGray"
+                    android:layout_weight="1"
+                    android:padding="8dp"
+                    android:textSize="15sp"
+                    app:layout_constraintStart_toStartOf="@+id/backArrow"
+                    app:layout_constraintTop_toBottomOf="@+id/cardBoxes"
+                    android:layout_marginTop="5dp"
+                    tools:ignore="MissingConstraints" />
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+        <!--stores -->
+        <LinearLayout
+            android:id="@+id/stores"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/backArrow"
+            app:layout_constraintEnd_toEndOf="@id/talabatMart"
+            app:layout_constraintTop_toBottomOf="@id/storesTabs"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+            <!--talabat mart-->
+            <LinearLayout
+                android:layout_width="375dp"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/talabat_mart_logo"
+                    android:contentDescription="@string/talabat_mart_logo"
+                    android:layout_gravity="center"
+
+                    />
+                <LinearLayout
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/talabat_mart"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        tools:ignore="MissingConstraints" />
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/grocery_convenience_store"
+                        android:textStyle="bold"
+                        android:textColor="@color/thickGray"
+                        android:textSize="14sp"
+                        tools:ignore="MissingConstraints" />
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/waiting_time"
+                            android:src="@drawable/waiting_time"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/within_20_mins"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:ignore="MissingConstraints" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Dawagen El Watanya-->
+            <LinearLayout
+                android:layout_width="375dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/go_supermarket"
+                    android:contentDescription="@string/_2go_supermarket"
+                    android:layout_gravity="center"
+
+                    />
+                <LinearLayout
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/go_supermarket"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        tools:ignore="MissingConstraints" />
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hypermarket"
+                        android:textStyle="bold"
+                        android:textColor="@color/thickGray"
+                        android:textSize="14sp"
+                        tools:ignore="MissingConstraints" />
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/waiting_time"
+                            android:src="@drawable/waiting_time"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/within_25_mins"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:ignore="MissingConstraints" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <!--soudi supermarket-->
+            <LinearLayout
+                android:layout_width="375dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/soudi_supermarket"
+                    android:contentDescription="@string/_2go_supermarket"
+                    android:layout_gravity="center"
+
+                    />
+                <LinearLayout
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/soudi_supermarket"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        tools:ignore="MissingConstraints" />
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hypermarket"
+                        android:textStyle="bold"
+                        android:textColor="@color/thickGray"
+                        android:textSize="14sp"
+                        tools:ignore="MissingConstraints" />
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/waiting_time"
+                            android:src="@drawable/waiting_time"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/within_21_mins"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:ignore="MissingConstraints" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--metro supermarket-->
+            <LinearLayout
+                android:layout_width="375dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/metro_market"
+                    android:contentDescription="@string/metro_market"
+                    android:layout_gravity="center"
+
+                    />
+                <LinearLayout
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/metro_markets"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        tools:ignore="MissingConstraints" />
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hypermarket"
+                        android:textStyle="bold"
+                        android:textColor="@color/thickGray"
+                        android:textSize="14sp"
+                        tools:ignore="MissingConstraints" />
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/waiting_time"
+                            android:src="@drawable/waiting_time"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/within_21_mins"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:ignore="MissingConstraints" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--spinnes supermarket-->
+            <LinearLayout
+                android:layout_width="375dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/spinnes"
+                    android:contentDescription="@string/spinnes"
+                    android:layout_gravity="center"
+
+                    />
+                <LinearLayout
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/spinneys"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        tools:ignore="MissingConstraints" />
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hypermarket"
+                        android:textStyle="bold"
+                        android:textColor="@color/thickGray"
+                        android:textSize="14sp"
+                        tools:ignore="MissingConstraints" />
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/waiting_time"
+                            android:src="@drawable/waiting_time"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/within_15_mins"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:ignore="MissingConstraints" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:layout_constraintTop_toBottomOf="@+id/stores"
+            tools:ignore="MissingConstraints">
+
+        </LinearLayout>
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
