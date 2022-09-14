@@ -66,7 +66,7 @@
             app:layout_constraintTop_toBottomOf="@+id/backArrow"
             android:layout_marginTop="15dp"
             android:orientation="horizontal"
-            android:padding="10dp"
+            android:padding="5dp"
             android:background="@drawable/search_box_border"
             >
             <ImageView
@@ -137,7 +137,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Use"
+                        android:text="@string/use"
                         android:textSize="16sp"
                         android:letterSpacing="0.05"
                         android:textColor="@color/black"
@@ -146,7 +146,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Voucher"
+                        android:text="@string/voucher"
                         android:textSize="16sp"
                         android:textColor="@color/black"
                         />
@@ -157,6 +157,7 @@
                     android:layout_width="22dp"
                     android:layout_height="30dp"
                     android:src="@drawable/coupon"
+                    android:contentDescription="@string/coupon"
                     />
 
             </LinearLayout>
@@ -181,7 +182,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Popular"
+                        android:text="@string/popular"
                         android:textSize="16sp"
                         android:letterSpacing="0.05"
                         android:textColor="@color/black"
@@ -190,7 +191,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="stores"
+                        android:text="@string/stores"
                         android:textSize="16sp"
                         android:textColor="@color/black"
                         />
@@ -201,6 +202,7 @@
                     android:layout_width="20dp"
                     android:layout_height="40dp"
                     android:src="@drawable/heart"
+                    android:contentDescription="@string/heart"
                     />
 
             </LinearLayout>
@@ -223,7 +225,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Fast"
+                        android:text="@string/fast"
                         android:textSize="16sp"
                         android:letterSpacing="0.05"
                         android:textColor="@color/black"
@@ -232,7 +234,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="delivery"
+                        android:text="@string/delivery"
                         android:textSize="16sp"
                         android:textColor="@color/black"
                         />
@@ -243,6 +245,7 @@
                     android:layout_width="21dp"
                     android:layout_height="40dp"
                     android:src="@drawable/clock"
+                    android:contentDescription="@string/waiting"
                     />
 
             </LinearLayout>
@@ -251,9 +254,10 @@
 
 <!--shop by store text-->
         <TextView
+            android:id="@+id/storeTypeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Shop by store type"
+            android:text="@string/shop_by_store_type"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="20sp"
@@ -262,8 +266,269 @@
             android:layout_marginTop="15dp"
             tools:ignore="MissingConstraints" />
 
-        
+<!--stores different tabs-->
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/storesTabs"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             app:layout_constraintStart_toStartOf="@id/backArrow"
+             app:layout_constraintEnd_toEndOf="@+id/talabatMart"
+             app:layout_constraintTop_toBottomOf="@+id/storeTypeText"
+             android:layout_marginTop="8dp"
+             tools:ignore="MissingConstraints">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+         <TextView
+             android:id="@+id/firstTab"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@drawable/store_tab_box_clicked"
+             android:text="@string/grocery_stores"
+             android:textStyle="bold"
+             android:textColor="@color/white"
+             android:padding="8dp"
+             android:layout_weight="1"
+             android:textSize="15sp"
+             android:layout_marginEnd="10dp"
+             android:layout_marginTop="5dp"
+             tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/secondTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/store_tab_box_not_clicked"
+                android:text="@string/fruits_vegetables"
+                android:textStyle="bold"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/thickGray"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:textSize="15sp"
+                android:layout_marginTop="5dp"
+                tools:ignore="MissingConstraints" />
+            <TextView
+                android:id="@+id/thirdTab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/store_tab_box_not_clicked"
+                android:text="@string/fresh_food"
+                android:textStyle="bold"
+                android:textColor="@color/thickGray"
+                android:layout_weight="1"
+                android:padding="8dp"
+                android:textSize="15sp"
+                app:layout_constraintStart_toStartOf="@+id/backArrow"
+                app:layout_constraintTop_toBottomOf="@+id/cardBoxes"
+                android:layout_marginTop="5dp"
+                tools:ignore="MissingConstraints" />
 
+        </LinearLayout>
+
+     </androidx.core.widget.NestedScrollView>
+
+<!--stores -->
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/backArrow"
+            app:layout_constraintEnd_toEndOf="@id/talabatMart"
+            app:layout_constraintTop_toBottomOf="@id/storesTabs"
+            android:orientation="vertical"
+            tools:ignore="MissingConstraints">
+
+<!--talabat mart-->
+            <LinearLayout
+                android:layout_width="375dp"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/talabat_mart_logo"
+                    android:contentDescription="@string/talabat_mart_logo"
+                    android:layout_gravity="center"
+
+                    />
+                <LinearLayout
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/talabat_mart"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        tools:ignore="MissingConstraints" />
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/grocery_convenience_store"
+                        android:textStyle="bold"
+                        android:textColor="@color/thickGray"
+                        android:textSize="14sp"
+                        tools:ignore="MissingConstraints" />
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/waiting_time"
+                            android:src="@drawable/waiting_time"/>
+                        <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/within_20_mins"
+                        android:textColor="@color/black"
+                        android:textSize="16sp"
+                        tools:ignore="MissingConstraints" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+<!--Dawagen El Watanya-->
+            <LinearLayout
+                android:layout_width="375dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/go_supermarket"
+                    android:contentDescription="@string/_2go_supermarket"
+                    android:layout_gravity="center"
+
+                    />
+                <LinearLayout
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/go_supermarket"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        tools:ignore="MissingConstraints" />
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hypermarket"
+                        android:textStyle="bold"
+                        android:textColor="@color/thickGray"
+                        android:textSize="14sp"
+                        tools:ignore="MissingConstraints" />
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/waiting_time"
+                            android:src="@drawable/waiting_time"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/within_25_mins"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:ignore="MissingConstraints" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+<!--soudi supermarket-->
+            <LinearLayout
+                android:layout_width="375dp"
+                android:layout_marginTop="10dp"
+                android:layout_height="wrap_content"
+                >
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/soudi_supermarket"
+                    android:contentDescription="@string/_2go_supermarket"
+                    android:layout_gravity="center"
+
+                    />
+                <LinearLayout
+                    android:layout_marginStart="15dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/soudi_supermarket"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="18sp"
+                        tools:ignore="MissingConstraints" />
+                    <TextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hypermarket"
+                        android:textStyle="bold"
+                        android:textColor="@color/thickGray"
+                        android:textSize="14sp"
+                        tools:ignore="MissingConstraints" />
+                    <LinearLayout
+                        android:layout_marginTop="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        tools:ignore="UseCompoundDrawables">
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_marginEnd="5dp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@string/waiting_time"
+                            android:src="@drawable/waiting_time"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/within_21_mins"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            tools:ignore="MissingConstraints" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
 
 
 

@@ -6,5 +6,29 @@
     <string name="talabtMart">talabat mart</string>
     <string name="search">Search for products or stores</string>
     <string name="searchIcon">Search Icon</string>
+    <string name="fruits_vegetables"><![CDATA[Fruits & Vegetables]]></string>
+    <string name="fresh_food">Fresh Food</string>
+    <string name="grocery_stores">Grocery Stores</string>
+    <string name="use">Use</string>
+    <string name="voucher">Voucher</string>
+    <string name="shop_by_store_type">Shop by store type</string>
+    <string name="popular">Popular</string>
+    <string name="stores">stores</string>
+    <string name="coupon">coupon</string>
+    <string name="heart">heart</string>
+    <string name="fast">Fast</string>
+    <string name="delivery">delivery</string>
+    <string name="waiting">Waiting</string>
+    <string name="talabat_mart_logo">talabat_mart_logo</string>
+    <string name="talabat_mart">talabat mart</string>
+    <string name="grocery_convenience_store">Grocery, Convenience Store</string>
+    <string name="waiting_time">waiting time</string>
+    <string name="_2go_supermarket">2go supermarket</string>
+    <string name="go_supermarket">2GO Supermarket</string>
+    <string name="hypermarket">Hypermarket</string>
+    <string name="within_25_mins">Within 25 mins</string>
+    <string name="within_20_mins">Within 20 mins</string>
+    <string name="soudi_supermarket">Soudi Supermarket</string>
+    <string name="within_21_mins">Within 21 mins</string>
 
 </resources>

@@ -5,6 +5,8 @@
       <map>
         <entry key="app/src/main/res/drawable/card_box_border.xml" value="0.2975" />
         <entry key="app/src/main/res/drawable/search_box_border.xml" value="0.2975" />
+        <entry key="app/src/main/res/drawable/store_tab_box.xml" value="0.2975" />
+        <entry key="app/src/main/res/drawable/store_tab_box_not_clicked.xml" value="0.2975" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.3536458333333333" />
       </map>
     </option>
