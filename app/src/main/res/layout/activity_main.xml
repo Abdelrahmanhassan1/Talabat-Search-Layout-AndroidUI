@@ -105,6 +105,165 @@
 
         <!-- *************** -->
 
+<!-- boxes-->
+        <LinearLayout
+            android:id="@+id/cardBoxes"
+            android:layout_width="375dp"
+            android:layout_height="60dp"
+            app:layout_constraintStart_toStartOf="@+id/backArrow"
+            app:layout_constraintEnd_toEndOf="@+id/searchBox"
+            app:layout_constraintTop_toBottomOf="@+id/talabatMart"
+            tools:ignore="MissingConstraints"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+<!--use voucher-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_box_border"
+                android:layout_weight="1"
+                android:layout_marginEnd="20dp"
+                tools:ignore="UselessParent"
+                android:padding="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Use"
+                        android:textSize="16sp"
+                        android:letterSpacing="0.05"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Voucher"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+                <ImageView
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
+                    android:layout_width="22dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/coupon"
+                    />
+
+            </LinearLayout>
+<!--popular stores-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_box_border"
+                android:layout_weight="1"
+                android:layout_marginEnd="20dp"
+                tools:ignore="UselessParent"
+
+                android:padding="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Popular"
+                        android:textSize="16sp"
+                        android:letterSpacing="0.05"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="stores"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+                <ImageView
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
+                    android:layout_width="20dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/heart"
+                    />
+
+            </LinearLayout>
+<!--fast delivery-->
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/card_box_border"
+                android:layout_weight="1"
+                tools:ignore="UselessParent"
+                android:padding="5dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Fast"
+                        android:textSize="16sp"
+                        android:letterSpacing="0.05"
+                        android:textColor="@color/black"
+                        android:gravity="center"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="delivery"
+                        android:textSize="16sp"
+                        android:textColor="@color/black"
+                        />
+                </LinearLayout>
+                <ImageView
+                    android:layout_marginStart="20dp"
+                    android:layout_gravity="center"
+                    android:layout_width="21dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/clock"
+                    />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+<!--shop by store text-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Shop by store type"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintStart_toStartOf="@+id/backArrow"
+            app:layout_constraintTop_toBottomOf="@+id/cardBoxes"
+            android:layout_marginTop="15dp"
+            tools:ignore="MissingConstraints" />
+
+        
+
 
 
 
