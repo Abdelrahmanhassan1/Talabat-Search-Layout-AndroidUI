@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Task1TalabatLayout</string>
+    <string name="location">Mogama\'a El Mahakem</string>
+    <string name="deliver">Delivering to</string>
+    <string name="backArrow">backArrow</string>
+    <string name="talabtMart">talabat mart</string>
+    <string name="search">Search for products or stores</string>
+    <string name="searchIcon">Search Icon</string>
+
+</resources>
